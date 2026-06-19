@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:url("weather\ app\ background\ image.png");
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.weather-card{
+
+    width:380px;
+
+    padding:30px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.3);
+
+    color:rgb(119, 118, 118);
+
+    text-align:center;
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.25);
+}
+
+.weather-card h1{
+    margin-bottom:20px;
+}
+
+.search-box{
+    display:flex;
+    gap:10px;
+}
+
+.search-box input{
+
+    flex:1;
+
+    padding:12px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+}
+
+.search-box button{
+
+    width:50px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    background:#3b82f6;
+
+    color:white;
+
+    font-size:18px;
+}
+
+.weather-info{
+    margin-top:30px;
+}
+
+.weather-icon{
+    font-size:80px;
+}
+
+.weather-info h2{
+    font-size:70px;
+}
+
+.weather-info p{
+    font-size:22px;
+    margin:10px 0;
+}
+
+.weather-info h3{
+    font-weight:400;
+}
+
+.details{
+
+    margin-top:30px;
+
+    background:rgba(255,255,255,0.15);
+
+    border-radius:20px;
+
+    padding:15px;
+}
+
+.detail{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.detail:last-child{
+    border-bottom:none;
+}
