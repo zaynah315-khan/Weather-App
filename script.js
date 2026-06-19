@@ -1,9 +1,8 @@
-  const searchBtn = document.querySelector("button");
+const apiKey = "df4ba660db8e08d202c196a0114c6faf";
+
+const searchBtn = document.querySelector("button");
 
 searchBtn.addEventListener("click", () => {
-
-    console.log("Button Clicked");
-
     const city = document.querySelector("input").value.trim();
 
     if (city === "") {
@@ -12,41 +11,41 @@ searchBtn.addEventListener("click", () => {
     }
 
     getWeather(city);
-
 });
 
 async function getWeather(city) {
-
     try {
-
         const response = await fetch(
-            `https://api.weatherapi.com/v1/current.json?key=6fd08f88d1d44f5fbd3110100260706&q=${city}`
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
         );
 
         const data = await response.json();
 
         console.log(data);
 
-        document.querySelector(".temp").innerHTML =
-            Math.round(data.current.temp_c) + "°C";
+        if (data.cod != 200) {
+            alert(data.message);
+            return;
+        }
 
-        document.querySelector(".city").innerHTML =
-            data.location.name;
+        document.querySelector(".temp").textContent =
+            Math.round(data.main.temp) + "°C";
 
-        document.querySelector(".condition").innerHTML =
-            data.current.condition.text;
+        document.querySelector(".city").textContent =
+            "📍 " + data.name + ", " + data.sys.country;
 
-        document.querySelector(".humidity").innerHTML =
-            data.current.humidity + "%";
+        document.querySelector(".condition").textContent =
+            data.weather[0].main;
 
-        document.querySelector(".wind").innerHTML =
-            data.current.wind_kph + " km/h";
+        document.querySelector(".humidity").textContent =
+            data.main.humidity + "%";
+
+        document.querySelector(".wind").textContent =
+            data.wind.speed + " km/h";
 
     } catch (error) {
-
         console.error(error);
-        alert("City not found!");
-
+        alert("Failed to fetch weather data.");
     }
-
 }
+ 

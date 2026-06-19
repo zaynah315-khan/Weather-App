@@ -1,87 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-<body>
-
-<div class="container">
-
-    <div class="weather-card">
-
+  <body>
+    <div class="container">
+      <div class="weather-card">
         <h1>Weather App</h1>
 
         <!-- Search Box -->
         <div class="search-box">
+          <input type="text" placeholder="Enter City" />
 
-            <input
-                type="text"
-                placeholder="Enter City">
-
-            <button>
-                <i class="fas fa-search"></i>
-            </button>
-
+          <button>
+            <i class="fas fa-search"></i>
+          </button>
         </div>
 
         <!-- Weather Information -->
         <div class="weather-info">
+          <div class="weather-icon">🌤️</div>
 
-            <div class="weather-icon">
-                ☀️
-            </div>
+          <h2 class="temp">28°C</h2>
 
-            <h2 class="temp">28°C</h2>
+          <p class="condition">Sunny Day</p>
 
-            <p class="condition">
-                Sunny Day
-            </p>
-
-            <h3 class="city">
-                📍 Karachi, Pakistan
-            </h3>
-
+          <h3 class="city">📍 Karachi, Pakistan</h3>
         </div>
 
         <!-- Weather Details -->
         <div class="details">
+          <div class="detail">
+            <span>💧 Humidity</span>
+            <span class="humidity"> 65% </span>
+          </div>
 
-            <div class="detail">
-                <span>💧 Humidity</span>
-                <span class="humidity">
-                    65%
-                </span>
-            </div>
+          <div class="detail">
+            <span>🌬 Wind Speed</span>
+            <span class="wind"> 12 km/h </span>
+          </div>
 
-            <div class="detail">
-                <span>🌬 Wind Speed</span>
-                <span class="wind">
-                    12 km/h
-                </span>
-            </div>
-
-            <div class="detail">
-                <span>🌡 Feels Like</span>
-                <span class="feels-like">
-                    30°C
-                </span>
-            </div>
-
+          <div class="detail">
+            <span>🌡 Feels Like</span>
+            <span class="feels-like"> 30°C </span>
+          </div>
         </div>
-
+      </div>
     </div>
 
-</div>
+    <footer class="footer">
+      <p class="greeting">Good Day ☀️</p>
 
-<script src="script.js"></script>
+      <p class="made-by">
+        Made with ❤️ by <span class="name">Zaynah Khan</span>
+      </p>
 
-</body>
+      <div class="theme-info">
+        <span>🌤 Weather App v1.0</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
